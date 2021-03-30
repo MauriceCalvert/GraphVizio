@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+  <assemblyIdentity name="GraphVizio, PublicKeyToken=b0f2e89f68ebfbeb" imageRuntimeVersion="v4.0.30319" />
+  <loaderSettings generateLogFile="true" shadowCopyEnabled="false" privileges="user" />
+</configuration>

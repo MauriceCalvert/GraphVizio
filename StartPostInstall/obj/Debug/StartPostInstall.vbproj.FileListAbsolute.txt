@@ -1,0 +1,12 @@
+D:\projects\GraphVizio.1.2.2\StartPostInstall\bin\Debug\logo.ico
+D:\projects\GraphVizio.1.2.2\StartPostInstall\bin\Debug\StartPostInstall.dll.config
+D:\projects\GraphVizio.1.2.2\StartPostInstall\bin\Debug\StartPostInstall.dll
+D:\projects\GraphVizio.1.2.2\StartPostInstall\bin\Debug\StartPostInstall.pdb
+D:\projects\GraphVizio.1.2.2\StartPostInstall\bin\Debug\StartPostInstall.xml
+D:\projects\GraphVizio.1.2.2\StartPostInstall\obj\Debug\StartPostInstall.vbprojAssemblyReference.cache
+D:\projects\GraphVizio.1.2.2\StartPostInstall\obj\Debug\StartPostInstall.Resources.resources
+D:\projects\GraphVizio.1.2.2\StartPostInstall\obj\Debug\StartPostInstall.vbproj.GenerateResource.cache
+D:\projects\GraphVizio.1.2.2\StartPostInstall\obj\Debug\StartPostInstall.vbproj.CoreCompileInputs.cache
+D:\projects\GraphVizio.1.2.2\StartPostInstall\obj\Debug\StartPostInstall.dll
+D:\projects\GraphVizio.1.2.2\StartPostInstall\obj\Debug\StartPostInstall.xml
+D:\projects\GraphVizio.1.2.2\StartPostInstall\obj\Debug\StartPostInstall.pdb

@@ -1,0 +1,275 @@
+title View or edit available shapes and connectors in the settings
+say GraphVizio has its own stencil, stored in
+say C:\Document and Settings\[Your name]\Application Data\GraphVizio\GraphVizio.VSS
+goto menu
+say To edit this template, select
+say Graph -> Tools -> Stencil
+showmenu 7 2
+openstencil
+goto settings
+say The shapes and connectors in this stencil are those you see in settings
+check shapeis	
+set shapename square
+uncheck shapeis	
+check connectoris	
+set connectorname dynamic
+uncheck connectoris	
+say The changes you make to the stencil take effect the next time you start Visio.
+
+title Change the way shapes are layed out
+opensample network2.vsd
+say GraphViz can layout a given diagram in many ways
+goto settings
+say You can determine which is best for your diagram by changing the 'overlap' parameter
+say Which is in the Advanced tab
+set overlap prism
+layout
+set overlap ortho
+layout
+set overlap scale
+layout
+say Experiment with this setting to find the one that best suits your needs
+
+title Fix connectors that aren't correctly glued to a shape
+opensample broken.vsd
+goto right
+say The connectors in this diagram are not correctly glued. 
+say This is obvious for the red ones, which are partially or not connected at all.
+say The blue one looks right, but its ends are under the shapes, not glued.
+goto menu
+say To fix the connectors, use the Connectors -> Fix unglued option
+showmenu 6 4
+fixunglued
+say Notice that the connectors are glued to what is closest, this might reverse arrows.
+showconnectors
+
+title Layout a diagram in different ways
+opensample glucose.vsd
+say This is the chemical structure of glucose
+goto menu
+say To lay it out, from the main Visio menu, select
+say Graph -> Layout
+showmenu 2
+layout
+say To fine-tune the layout, open the settings
+showmenu 1
+goto settings
+say Choose a layout algorithm
+check neato
+say If desired, select a specific shape
+check shapeis
+set shapename octagon
+say ... with a specific colour
+check shapefillcolours
+shapefillcolour lightblue
+check shapelinecolours
+shapelinecolour darkblue
+say ... how lines are drawn 
+check straight
+say ... and where they are connected
+check ideal
+layout
+say The settings you use are saved as part of each Visio diagram.
+say Tip: Use Undo (Ctrl-Z) to revert to the previous layout
+
+title Load and save presets
+say The GraphVizio settings you make are saved as part of the Visio diagram.
+goto settings
+say When laying out many diagrams in a consistent format, you can use presets to save and restore settings in one go.
+goto menu
+say You can save these settings as a named preset
+showmenu 3 1
+say The preset are simple text files in
+say C:\Documents\[your name]\Application Data\graphvizio\settings
+say You may rename or delete them as necessary
+
+title Make one or more shapes narrower / wider / shorter / taller
+opensample shapes.vsd
+say There are several options which allow you to quickly adjust shapes' sizes.
+say Here's how it works
+goto menu
+say Size to fit
+showmenu 5 7
+sizetofit
+say Size to widest
+showmenu 5 8
+sizetowidest
+say Make taller
+showmenu 5 5
+maketaller
+say The % used when making taller / wider / narrower / shorter is set in the options
+showmenu 7 1
+showoptions
+
+title Select shapes or connectors according to how they are connected
+say GraphVizio only lays out shapes that are connected together
+opensample connected.vsd
+goto menu
+say In this diagram, shapes A and B are correctly connected
+say Select Connected shapes
+showmenu 5 9
+shapesselectconnected
+deselect
+say The green line is glued at both ends
+say Select Connected connectors
+showmenu 6 1
+connectorsselectconnected
+deselect
+say The orange connector is partially connected to C
+say Select partially Connected connectors
+showmenu 6 3
+connectorsselectpartlyconnected
+deselect
+say and the red connector is not connected at all
+say Select UnConnected connectors
+showmenu 6 2
+connectorsselectunconnected
+deselect
+
+say Shapes C, D, E and F are not connected
+say Select Unconnected shapes
+showmenu 5 10
+shapesselectunconnected
+deselect
+
+say To fix all these problems in one go
+say Use the Connectors -> Fix unglued
+showmenu 6 4
+connectorsfixunglued
+say The connectors are glued to centres. This will be fixed on the next layout.
+showconnectors
+deselect
+say Notice that these select functions are additive - 
+say the shapes currently selected are not deselected first
+
+title Layout groups of connected shapes in separate areas
+opensample clusters.vsd
+goto left
+say This diagram contains 3 sets of connected shapes
+say Blue, green and orange, which we would like to layout in 3 clusters
+goto menu
+say This is achieved with the Shapes -> Auto-Cluster
+showmenu 5 1
+shapesautocluster
+say The 3 clusters are now in 3 seperate layers
+say Change the algorithm to clustered
+check fdp
+say and layout
+layout
+
+title Keep shapes together in groups
+opensample threecountries.vsd
+goto left
+say This diagram is correct, but it would be clearer if cities were grouped by country
+say (English cities are blue, French cites are gree, Italian cities are yellow)
+
+say This is achieved by clustering
+say First select British cities
+
+select london birmingham cardiff
+say and cluster them
+showmenu 5 2
+shapescluster
+say then select the French cities and cluster them
+say and select the Italian cities and cluster them
+select paris lyon bordeaux
+shapescluster
+select milano roma torino
+shapescluster
+say With the flat layout, the shapes don't cluster by country
+check neato
+layout
+say but with the clustered layout, the cities are grouped by country
+check fdp
+layout
+
+title View the Introduction to GraphVizio
+say Thank you for installing GraphVizio
+say This short demonstration will enable you to quickly understand how GraphVizio works
+say It only takes a moment, rest assured that it will be well spent
+goto bottom
+opensample orgchart.vsd
+say We shall start with a hierarchical drawing.
+say Let's layout this simple organisation chart 
+layout
+say Here, the connectors are straight lines, between centres
+say A more traditional layout would use dynamic connectors
+goto menu
+say The Graph -> Settings menu option opens the GraphVizio settings window
+showmenu 1
+goto settings
+say Check the specific connector option
+check connectoris	
+say ... change the connector to dynamic
+set connectorname dynamic
+say and connect to "top and bottom"
+check topbottom
+layout
+say The diagram can be made more compact by resizing the shapes
+goto menu
+say To maintain the proportions, we'll use "Size to Widest"
+showmenu 5 8
+sizetowidest
+say As a final variant, we can apply a pre-defined corporate style,
+say where the shape varies according to the rank
+check shapeis
+set shapename orgchart+
+say The orgchart+ shape has three shapes, orgchart0, orgchart1 and orgchart2
+say Nodes are drawn using the shape that has its rank (0, 1, 2, etc.)
+layout
+close
+
+say Certain hierarchical diagrams can be cumbersome to layout nicely
+goto centre
+opensample sitemap.vsd
+say Here is the Sitemap of an online bank
+zoom 50
+zoom 25
+zoom page
+say It exhibits a common hierarachical layout problem, where the diagram becomes extremely wide
+goto settings
+say This can be remedied using the "Stack Leaves" option, which places leaf nodes vertically under their parent
+set leafstack all
+say "Lowest" only stacks leaves with the lowest rank
+say "All" stacks all leaves, regardless of rank.
+
+say As this diagram is quite large, we'll suppress screen updating whilst drawing
+say (This option can be set permanently in Tools->Options)
+updating off
+layout
+updating on
+zoom 25
+zoom 50
+close
+
+goto centre
+say The next type of drawing are those without hierarchy (flat), for example database relationships
+opensample labtesting.csv.vsd
+say These are the relationships in a database designed to monitor laboratory testing processes
+say They are prepared in a CSV (Comma Separated Variable) file like this
+
+say The primary table Authority 
+say has Method with a foreign key
+
+say The primary table Business 
+say has BusinessMeasure with a foreign key
+say and so on
+close
+goto menu
+say Use the Import CSV option to read this CSV file and lay it out
+showmenu 4 2
+importcsv labtesting.csv
+say Observe what happens when we layout a second time
+layout
+say Notice how the layout changes at each successive layout
+say This is controlled by the "SEED" parameter, which is incremented at each layout.
+check lockseed
+say You can lock the seed to its current value when a given layout is pleasing so that the subsequent layouts will remain the same.
+uncheck lockseed
+layout
+close
+say That concludes the introduction to GraphVizio
+goto menu
+say You can view this again, and other short tutorials with the option
+say Help -> How do I?
+showmenu 8 1

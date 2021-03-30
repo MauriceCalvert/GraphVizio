@@ -1,0 +1,44 @@
+ digraph  RootGraph {
+  node [color="#000000", fillcolor="#FFFFFF", fontname=Arial, fontsize=12, style=filled];
+  edge [color="#000000", fillcolor="#FFFFFF"];
+  subgraph cluster_0 {
+      graph [color="#D3D3D3", fillcolor="#D3D3D3", fontname=Arial, fontsize=12, style=filled, label="process #1", shape=box];
+      node [fontname=Arial, fontsize=12, style=filled];
+      "" [width="1.25", height="4.04166666666667", pos="46.979540823428,211.46984", color="#D3D3D3", fillcolor="#D3D3D3", label="process #1", shape=box];
+      "a0" [width="0.75", height="0.482142857142857", pos="56.979540823428,307.96984", color="#FFFFFF", fillcolor="#FFFFFF", label=a0, shape=ellipse];
+      "a1" [width="0.75", height="0.482142857142857", pos="56.979540823428,235.96984", color="#FFFFFF", fillcolor="#FFFFFF", label=a1, shape=ellipse];
+      "a2" [width="0.75", height="0.482142857142857", pos="56.979540823428,163.96984", color="#FFFFFF", fillcolor="#FFFFFF", label=a2, shape=ellipse];
+      "a3" [width="0.75", height="0.482142857142857", pos="56.979540823428,91.96984", color="#FFFFFF", fillcolor="#FFFFFF", label=a3, shape=ellipse];
+  }
+  subgraph cluster_1 {
+      graph [color="#0000FF", fillcolor="#0000FF", fontname=Arial, fontsize=12, style=filled, label="process #2", shape=box];
+      node [fontname=Arial, fontsize=12, style=filled];
+      "" [width="1.09722222222222", height="4.04166666666667", pos="162.479540823428,211.46984", color="#0000FF", fillcolor="#0000FF", label="process #2", shape=box];
+      "b0" [width="0.75", height="0.482142857142857", pos="161.979540823428,307.96984", color="#000000", fillcolor="#D3D3D3", label=b0, shape=ellipse];
+      "b1" [width="0.75", height="0.482142857142857", pos="163.979540823428,235.96984", color="#000000", fillcolor="#D3D3D3", label=b1, shape=ellipse];
+      "b2" [width="0.75", height="0.482142857142857", pos="166.979540823428,163.96984", color="#000000", fillcolor="#D3D3D3", label=b2, shape=ellipse];
+      "b3" [width="0.75", height="0.482142857142857", pos="157.979540823428,91.96984", color="#000000", fillcolor="#D3D3D3", label=b3, shape=ellipse];
+  }
+  "end" [width="0.50694", height="0.50694", pos="106.979540823428,18.96984", label=end, shape=box];
+  "start" [width="1.0373", height="0.777975", pos="108.979540823428,382.96984", label=start, shape=diamond];
+  "a0"->"a1";
+  "a1"->"a2";
+  "a2"->"a3";
+  "a3"->"a0";
+  "b0"->"b1";
+  "b1"->"b2";
+  "b2"->"b3";
+  "a0"->"a1";
+  "a1"->"a2";
+  "a2"->"a3";
+  "a3"->"a0";
+  "b0"->"b1";
+  "b1"->"b2";
+  "b2"->"b3";
+  "a1"->"b3";
+  "a3"->"end";
+  "b2"->"a3";
+  "b3"->"end";
+  "start"->"a0";
+  "start"->"b0";
+}

@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tooltips>
+<tooltip>
+  <name>algorithm</name>
+  <text>
+Determines which program will be used to layout your drawing.
+Select an algorithm to see a sample layout.
+</text>
+</tooltip>
+  <tooltip>
+    <name>dot</name>
+    <text>
+The DOT algorithm is used for hierarchical diagrams, such as
+organisation charts and flowcharts, where some shapes have
+more importance (or come before) others.
+
+If arrows would make sense in your diagram (even if they are not drawn),
+then DOT is the appropriate algorithm.
+    </text>
+  </tooltip>
+  
+  <tooltip>
+    <name>neato</name>
+    <text>
+      The NEATO algorithm is used for diagrams with no
+      hierarchy, such as network, database and software
+      engineering diagrams.
+    </text>
+  </tooltip>
+
+  <tooltip>
+    <name>fdp</name>
+    <text>
+      The FDP algorithm is similar to NEATO, but it supports subgraphs.
+      Each subgraph is a Visio layer, which is layed out seperately
+      and then the subgraphs are layed out as blocks to create
+      the complete diagram.
+    </text>
+  </tooltip>
+
+  <tooltip>
+    <name>twopi</name>
+    <text>
+      The TWOPI algorithm lays out shapes in concentric circles around
+      a root node (which you must define). This alogorithm is suitable for
+      complex network diagrams.
+    </text>
+  </tooltip>
+
+  <tooltip>
+    <name>circo</name>
+    <text>
+      The CIRCO algorithm lays out shapes initially on a circle, whilst 
+      minimising edge crossings. This algorithm is suitable for
+      simple network diagrams.
+    </text>
+  </tooltip>
+<tooltip>
+  <name>rankdir</name>
+  <text>
+    Determines whether your diagram will be layed out top-to-bottom or 
+    left-to-right. This only has meaning for hierarchical diagrams, typically
+    those laid out with the DOT alogorithm.
+  </text>
+</tooltip>
+  <tooltip>
+    <name>TB</name>
+    <text>
+    Lays out the diagram top-to-bottom with the head node at the top.
+    </text>
+  </tooltip>
+  <tooltip>
+    <name>LR</name>
+    <text>
+      Lays out the diagram left-to-right with the head node on the left.
+    </text>
+  </tooltip>
+  <tooltip>
+    <name>leafstack</name>
+    <text>
+    When laying out a hierarchical diagram from top-to-bottom, this option
+    causes the lowest nodes (the leaves) to be stacked vertically underneath their parent rather 
+    than side-by-side. 
+    
+    This is useful for tree-style diagrams, which often become wide and short; stacking the
+    leaves makes the diagram narrower and taller, more suitable for portrait display.
+    
+    'ALL' stacks the bottom-most leaves at all levels. 
+    'LOWEST' only stacks leaves at the lowest level.
+    </text>
+  </tooltip>
+  <tooltip>
+    <name>aspectratio</name>
+    <text>
+      Sets the height-width ratio of the diagram.
+      For ISO 216 "A" paper sizes, use 0.707 for landscape and 1.414 for portrait.
+      Set the aspect ratio to zero to allow the diagram to size automatically.
+    </text>
+  </tooltip>
+  <tooltip>
+    <name>btnLayout</name>
+    <text>
+    Layout the current diagram using the current settings.
+    Tip: You can use 'undo' (Ctrl-Z) to revert to the previous layout
+    (layout is considered as a single operation).
+    </text>
+  </tooltip>
+  <tooltip>
+    <name>btnImportDOT</name>
+    <text>
+    Import a DOT file as a new Visio page. The format of DOT files is
+    described at www.graphviz.org.
+    </text>
+  </tooltip>
+  <tooltip>
+    <name>setroot</name>
+    <text>
+    When using the TWOPI algorithm, you must define the root node (the shape which is the logical
+    'centre' of the diagram). To set the root node, select the root shape and click 'Set Root'.
+    You only need to do this once, it is saved with the Visio diagram.
+    </text>
+  </tooltip>
+  <tooltip>
+    <name>showroot</name>
+    <text>
+    Selects the current root node.
+    </text>
+  </tooltip>
+  <tooltip>
+    <name>shapeis</name>
+    <text>
+    By default, GraphVizio performs layout by moving existing shapes. This option allows you to replace existing shapes with 
+    a new shape during layout, for example to apply a consistent style. 
+    </text>
+  </tooltip>
+  <tooltip>
+    <name>shapename</name>
+    <text>
+    Specifies which shape will be used to replace existing shapes during layout. The available shapes shown are those in
+    in the GraphVizio stencil, GraphVizio.VSS. You can edit and add to this stencil with Graph->Tools->Stencil.
+    </text>
+  </tooltip>
+  <tooltip>
+    <name>shapefillcolours</name>
+    <text>
+    When using a shape from the GraphVizio stencil, 
+    this option allows you to select a specific fill colour.
+    </text>
+  </tooltip>
+  <tooltip>
+    <name>shapefillcolour</name>
+    <text>
+    Click to select a fill colour for shapes.
+    </text>
+  </tooltip>
+  <tooltip>
+    <name>shapetextcolours</name>
+    <text>
+      When using a shape from the GraphVizio stencil, 
+      this option allows you to select a specific text colour.
+    </text>
+  </tooltip>
+  <tooltip>
+    <name>shapetextcolour</name>
+    <text>
+      Click to select a text colour for shapes.
+    </text>
+  </tooltip>
+  <tooltip>
+    <name>shapelinecolours</name>
+    <text>
+    This option allows you to specify which colour will be used to draw lines (connectors).
+    </text>
+  </tooltip>
+  <tooltip>
+    <name>shapelinecolour</name>
+    <text>
+      Click to select a colour to draw lines (connectors).
+    </text>
+  </tooltip>
+  <tooltip>
+    <name>connectorstyle</name>
+    <text>
+    By default, lines (connectors) are drawn using the style of the chosen GraphViz alorithm.
+    This option allows you to use a different line style, without affecting the layout.
+    </text>
+  </tooltip>
+  <tooltip>
+    <name>straight</name>
+    <text>      
+    Forces connectors to be drawn as straight lines, which may pass behind shapes.
+    </text>
+  </tooltip>
+  <tooltip>
+    <name>splines</name>
+    <text>
+    Uses curved lines to draw connectors. Selecting this option doesn't mean that all connectors will
+    necessarily be curved, the result depends on the GraphViz algorithm being used.
+    </text>
+  </tooltip>
+  <tooltip>
+    <name>connectorname</name>
+    <text>
+      Use a specific connector to draw lines. The available connectors shown are those in
+      in the GraphVizio stencil, GraphVizio.VSS. You can edit and add to this stencil with Graph->Tools->Stencil.
+    </text>
+  </tooltip>
+  <tooltip>
+    <name>connectto</name>
+    <text>
+    By default, GraphVizio connects shapes by creating connection points determined by the GraphViz alogorithm.
+    You can override this behaviour, to force connections to the top, bottom, nearest quadrant etc.
+    </text>
+  </tooltip>
+  <tooltip>
+    <name>ideal</name>
+    <text>
+      Connections are made at the 'ideal' point on the periphery of the shape. This is the default.
+    </text>
+  </tooltip>
+  <tooltip>
+    <name>topbottom</name>
+    <text>
+    Forces connectors to be attached to the top/bottom of shapes, in the middle.
+    This typically used in conjunction with a dynamic connector to draw organisation charts.
+    </text>
+  </tooltip>
+  <tooltip>
+    <name>quadrant</name>
+    <text>
+    Forces connectors to be attached in the middle of the top, right, bottom or left of the shape.
+    </text>
+  </tooltip>
+  <tooltip>
+    <name>strict</name>
+    <text>
+      Determines if the diagram should be layed-out using the 'strict' option, which forbids self-arcs
+      and multi-edges. This is documented at http://www.graphviz.org/Documentation/dotguide.pdf.
+    </text>
+  </tooltip>
+  <tooltip>
+    <name>overlap</name>
+    <text>
+      Determines how GraphViz will resolve overlapping shapes. This has considerable influence on the results
+      and is the first option you should experiment with. The possible values are described at
+      http://www.graphviz.org/doc/info/attrs.html#d:overlap
+    </text>
+  </tooltip>
+  <tooltip>
+    <name>drawboundingboxes</name>
+    <text>
+    When checked, draws a black box around each graph and sub-graph during layout.
+    </text>
+  </tooltip>
+  <tooltip>
+    <name>type</name>
+    <text>
+    Sets the type of diagram to be drawn. In a nutshell, Directed graphs are those which would logically be drawn 
+    with arrows (representing flow or hierarchy) whilst Undirected graphs are drawn without directional relations.
+    </text>
+  </tooltip>
+  <tooltip>
+    <name>digraph</name>
+    <text>
+    Draws a directed graph (which would logically be drawn
+      with arrows representing flow or hierarchy).
+    </text>
+  </tooltip>
+  <tooltip>
+    <name>graph</name>
+    <text>
+    Draws an undirected graph (a diagram without directional relations).
+    </text>
+  </tooltip>
+  <tooltip>
+    <name>rankbyposition</name>
+    <text>
+    Reverse the direction of connectors so as to make shapes nearer the top and left of the page
+    point to those further down and on the right. 
+    This allows you to make a shape the 'root' shape at the top simply by dragging it above
+    all the other shapes performing the layout.
+    </text>
+  </tooltip>
+  <tooltip>
+    <name>seed</name>
+    <text>
+      Determines the initial placement of shapes on the page.
+      By default, this number is incremented every time you layout a graph, creating a 
+      unique layout every time. If you find a particular layout pleasing, set the "lock seed" flag,
+      so that the same positioning will be used for every future layout.
+    </text>
+  </tooltip>
+  <tooltip>
+    <name>lockseed</name>
+    <text>
+      Locks the seed value, to produce a repeatable layout.
+    </text>
+  </tooltip>
+</tooltips>

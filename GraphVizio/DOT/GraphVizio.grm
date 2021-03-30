@@ -1,0 +1,47 @@
+{String Char} = {ANSI Printable} - ["]
+{Symbol Head}    = {Letter} + [_]
+{Symbol Tail}    = {Symbol Head} + {Digit}
+
+variable = ({Symbol Head} {Symbol Tail}*)
+
+integer        = {Digit}+
+float          = {Digit}+ '.' {Digit}+
+
+stringlit = '"' ( {String Char} | '""' | '\'{Printable})* '"'
+edgeop = '--' | '->'
+
+! Standard C++ style comments
+Comment Line = '//'
+Comment Start = '/*'
+Comment End = '*/'
+
+"Case Sensitive" = 'True'
+"Start Symbol" = <graph>
+
+<unsigned> ::= integer | float
+<number> ::= <unsigned> | '+' <unsigned> | '-' <unsigned>
+
+<id> ::= variable | <number> | stringlit
+<optionalid> ::= <id> |
+
+<graph> ::= <strict> <graph type> <optionalid> '{' <stmt list> '}'
+<strict> ::= strict |
+<graph type> ::= digraph | graph
+<stmt list> ::= <stmt> <stmt list> | <stmt> ';' <stmt list> |
+<stmt> ::= <attr stmt> | <node stmt> | <edge stmt> | <subgraph stmt> | <attr Attribute>
+<attr stmt> ::= <attr noun> <attr list>
+<attr noun> ::= graph | node | edge
+<attr list> ::= '[' <a list> ']' | '[' ']'
+<a list> ::= <attr Attribute> | <attr Attribute> ',' <a list> | <attr Attribute>  <a list>
+<attr Attribute> ::= <id> '=' <id> 
+ 
+<node stmt> ::= <node id> | <node id> <attr list>
+<node id> ::= <id> | <id> <port>
+<port> ::= <port location> | <port angle> | <port location> <port angle> | <port angle> <port location>
+<port location> ::= ':' <id> | ':' <id> '(' <id> ',' <id> ')'
+<port angle> ::= '@' <id>
+<edge stmt> ::= <node id> <edgeRHS> | <node id> <edgeRHS> <attr list> | <subgraph> <edgeRHS> | <subgraph> <edgeRHS> <attr list> 
+<edgeRHS> ::=     edgeop <node id> | edgeop <node id> <edgeRHS>
+               
+<subgraph stmt> ::= subgraph <id> '{' <stmt list> '}' | '{' <stmt list> '}' | subgraph <id> ';' 
+<subgraph> ::= subgraph <id> | '{' <stmt list> '}' | subgraph <id> '{' <stmt list> '}'  

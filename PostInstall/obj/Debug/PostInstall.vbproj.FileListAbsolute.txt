@@ -1,0 +1,12 @@
+D:\projects\GraphVizio.1.2.2\PostInstall\bin\Debug\PostInstall.exe.config
+D:\projects\GraphVizio.1.2.2\PostInstall\bin\Debug\PostInstall.exe
+D:\projects\GraphVizio.1.2.2\PostInstall\bin\Debug\PostInstall.pdb
+D:\projects\GraphVizio.1.2.2\PostInstall\bin\Debug\PostInstall.xml
+D:\projects\GraphVizio.1.2.2\PostInstall\obj\Debug\PostInstall.vbprojAssemblyReference.cache
+D:\projects\GraphVizio.1.2.2\PostInstall\obj\Debug\PostInstall.Resources.resources
+D:\projects\GraphVizio.1.2.2\PostInstall\obj\Debug\PostInstall.ProgressForm.resources
+D:\projects\GraphVizio.1.2.2\PostInstall\obj\Debug\PostInstall.vbproj.GenerateResource.cache
+D:\projects\GraphVizio.1.2.2\PostInstall\obj\Debug\PostInstall.vbproj.CoreCompileInputs.cache
+D:\projects\GraphVizio.1.2.2\PostInstall\obj\Debug\PostInstall.exe
+D:\projects\GraphVizio.1.2.2\PostInstall\obj\Debug\PostInstall.xml
+D:\projects\GraphVizio.1.2.2\PostInstall\obj\Debug\PostInstall.pdb

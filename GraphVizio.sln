@@ -1,0 +1,80 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.438
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Readme", "Readme", "{0E16A8F1-A4DC-4F10-8E3E-456E3B392777}"
+	ProjectSection(SolutionItems) = preProject
+		Copyright.txt = Copyright.txt
+		readme.txt = readme.txt
+	EndProjectSection
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "GOLD Engine", "GOLD Engine\GOLD Engine.vbproj", "{5BB7D470-2634-4FF8-B8E6-4BFEAF06BCC3}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "PostInstall", "PostInstall\PostInstall.vbproj", "{1E2F627B-E527-44DB-8A4C-69F583DEBC1C}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "StartPostInstall", "StartPostInstall\StartPostInstall.vbproj", "{04991CE7-2546-4B18-8FCB-62E77115A751}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "GraphVizio", "GraphVizio\GraphVizio.vbproj", "{664A04D6-D311-4547-AEC2-91531DD712B4}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "GraphVizioSetup", "Setup\GraphVizioSetup.vdproj", "{1866BB8D-ECF2-4287-A776-B02C790A7F91}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5BB7D470-2634-4FF8-B8E6-4BFEAF06BCC3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5BB7D470-2634-4FF8-B8E6-4BFEAF06BCC3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5BB7D470-2634-4FF8-B8E6-4BFEAF06BCC3}.Debug|x86.ActiveCfg = Debug|x86
+		{5BB7D470-2634-4FF8-B8E6-4BFEAF06BCC3}.Debug|x86.Build.0 = Debug|x86
+		{5BB7D470-2634-4FF8-B8E6-4BFEAF06BCC3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5BB7D470-2634-4FF8-B8E6-4BFEAF06BCC3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5BB7D470-2634-4FF8-B8E6-4BFEAF06BCC3}.Release|x86.ActiveCfg = Release|x86
+		{5BB7D470-2634-4FF8-B8E6-4BFEAF06BCC3}.Release|x86.Build.0 = Release|x86
+		{1E2F627B-E527-44DB-8A4C-69F583DEBC1C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1E2F627B-E527-44DB-8A4C-69F583DEBC1C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1E2F627B-E527-44DB-8A4C-69F583DEBC1C}.Debug|x86.ActiveCfg = Debug|x86
+		{1E2F627B-E527-44DB-8A4C-69F583DEBC1C}.Debug|x86.Build.0 = Debug|x86
+		{1E2F627B-E527-44DB-8A4C-69F583DEBC1C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1E2F627B-E527-44DB-8A4C-69F583DEBC1C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1E2F627B-E527-44DB-8A4C-69F583DEBC1C}.Release|x86.ActiveCfg = Release|x86
+		{1E2F627B-E527-44DB-8A4C-69F583DEBC1C}.Release|x86.Build.0 = Release|x86
+		{04991CE7-2546-4B18-8FCB-62E77115A751}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{04991CE7-2546-4B18-8FCB-62E77115A751}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{04991CE7-2546-4B18-8FCB-62E77115A751}.Debug|x86.ActiveCfg = Debug|x86
+		{04991CE7-2546-4B18-8FCB-62E77115A751}.Debug|x86.Build.0 = Debug|x86
+		{04991CE7-2546-4B18-8FCB-62E77115A751}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{04991CE7-2546-4B18-8FCB-62E77115A751}.Release|Any CPU.Build.0 = Release|Any CPU
+		{04991CE7-2546-4B18-8FCB-62E77115A751}.Release|x86.ActiveCfg = Release|x86
+		{04991CE7-2546-4B18-8FCB-62E77115A751}.Release|x86.Build.0 = Release|x86
+		{664A04D6-D311-4547-AEC2-91531DD712B4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{664A04D6-D311-4547-AEC2-91531DD712B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{664A04D6-D311-4547-AEC2-91531DD712B4}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{664A04D6-D311-4547-AEC2-91531DD712B4}.Debug|x86.Build.0 = Debug|Any CPU
+		{664A04D6-D311-4547-AEC2-91531DD712B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{664A04D6-D311-4547-AEC2-91531DD712B4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{664A04D6-D311-4547-AEC2-91531DD712B4}.Release|x86.ActiveCfg = Release|x86
+		{664A04D6-D311-4547-AEC2-91531DD712B4}.Release|x86.Build.0 = Release|x86
+		{1866BB8D-ECF2-4287-A776-B02C790A7F91}.Debug|Any CPU.ActiveCfg = Debug
+		{1866BB8D-ECF2-4287-A776-B02C790A7F91}.Debug|Any CPU.Build.0 = Debug
+		{1866BB8D-ECF2-4287-A776-B02C790A7F91}.Debug|x86.ActiveCfg = Debug
+		{1866BB8D-ECF2-4287-A776-B02C790A7F91}.Debug|x86.Build.0 = Debug
+		{1866BB8D-ECF2-4287-A776-B02C790A7F91}.Release|Any CPU.ActiveCfg = Release
+		{1866BB8D-ECF2-4287-A776-B02C790A7F91}.Release|Any CPU.Build.0 = Release
+		{1866BB8D-ECF2-4287-A776-B02C790A7F91}.Release|x86.ActiveCfg = Release
+		{1866BB8D-ECF2-4287-A776-B02C790A7F91}.Release|x86.Build.0 = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A0FB5863-F3FC-4571-8A39-ABC1341EE9A4}
+	EndGlobalSection
+	GlobalSection(TestCaseManagementSettings) = postSolution
+		CategoryFile = C:\Users\momo\AppData\Local\Temporary Projects\ThreadSafeCollections\Golf.vsmdi
+	EndGlobalSection
+EndGlobal

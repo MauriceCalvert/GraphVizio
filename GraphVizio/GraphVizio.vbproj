@@ -1,0 +1,511 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{664A04D6-D311-4547-AEC2-91531DD712B4}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>GraphVizio</RootNamespace>
+    <AssemblyName>GraphVizio</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <MyType>Windows</MyType>
+    <StartupObject>
+    </StartupObject>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>GraphVizio.snk</AssemblyOriginatorKeyFile>
+    <OptionInfer>On</OptionInfer>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>
+    </DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
+    <RegisterForComInterop>false</RegisterForComInterop>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>
+    </DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <CodeAnalysisRuleSet>ManagedMinimumRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+    <RegisterForComInterop>false</RegisterForComInterop>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <Optimize>true</Optimize>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Text</OptionCompare>
+  </PropertyGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="AddinExpress.MSO.2005">
+      <HintPath>C:\Program Files (x86)\Add-in Express\Add-in Express for .NET\Bin\AddinExpress.MSO.2005.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Interop.VBIDE.dll">
+      <HintPath>Interops\Interop.VBIDE.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Interop.Office.dll">
+      <HintPath>Interops\Interop.Office.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Interop.Visio.dll">
+      <HintPath>Interops\Interop.Visio.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Loader\adxregistrator.exe" />
+    <None Include="app.config" />
+    <None Include="DOT\GraphVizio.grm" />
+    <Content Include="graphvizio\broken.vsd">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="graphvizio\cluster.gv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="graphvizio\cluster2.gv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="graphvizio\clusters.vsd">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="graphvizio\connected.vsd">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="graphvizio\crazy.gv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="graphvizio\glucose.vsd">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="graphvizio\GraphVizio.egt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="graphvizio\GraphVizio.VSS">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="graphvizio\italyspain.vsd">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="graphvizio\labtesting.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="graphvizio\labtesting.csv.vsd">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="graphvizio\lion_share.gv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="graphvizio\network1.vsd">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="graphvizio\network2.vsd">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="graphvizio\orgchart.vsd">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="graphvizio\process.gv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="graphvizio\root.gv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="graphvizio\shapes.vsd">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="graphvizio\sitemap.vsd">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="graphvizio\threecountries.vsd">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="graphvizio\trafficlights.gv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="graphvizio\transparency.gv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="graphvizio\sitemap.vsdx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="Help\Pictures\Layout.vsd" />
+    <None Include="Help\Pictures\Thumbs.db" />
+    <None Include="Loader\adxloader.dll.manifest" />
+    <None Include="Resources\explain.psd">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Pointer.psd">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <!-- <None Include="GraphVizio.snk" /> -->
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AddinModule.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AddinModule.Designer.vb">
+      <DependentUpon>AddinModule.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\Coordinate.vb" />
+    <Compile Include="Classes\Edge.vb" />
+    <Compile Include="Classes\Graph.vb" />
+    <Compile Include="Classes\GraphVizioException.vb" />
+    <Compile Include="Classes\HowTo.vb" />
+    <Compile Include="Classes\Node.vb" />
+    <Compile Include="Classes\Polygon.vb" />
+    <Compile Include="Classes\PublicSettings.vb" />
+    <Compile Include="Classes\Setting.vb" />
+    <Compile Include="Common\ApplicationPath.vb" />
+    <Compile Include="Common\CleanupString.vb" />
+    <Compile Include="Common\ColorToRGB.vb" />
+    <Compile Include="Common\ConvertBitmapToRegion.vb" />
+    <Compile Include="Common\DispatchSilent.vb" />
+    <Compile Include="Common\DispatchWithProgress.vb" />
+    <Compile Include="Common\GetExecutingPath.vb" />
+    <Compile Include="Common\GetStreamResource.vb" />
+    <Compile Include="Common\GetWindowsVersion.vb" />
+    <Compile Include="Common\GraphVizioStartup.vb" />
+    <Compile Include="Common\HSVToRGB.vb" />
+    <Compile Include="Common\Is64Bit.vb" />
+    <Compile Include="Common\LocalDataDirectory.vb" />
+    <Compile Include="Common\Notepad.vb" />
+    <Compile Include="Common\Quote.vb" />
+    <Compile Include="Common\QuoteIf.vb" />
+    <Compile Include="Common\RunGraphViz.vb" />
+    <Compile Include="Common\shared.vb" />
+    <Compile Include="Common\UniqueName.vb" />
+    <Compile Include="Common\UnQuote.vb" />
+    <Compile Include="DOT\CleanupPos.vb" />
+    <Compile Include="DOT\DoReduction.vb" />
+    <Compile Include="DOT\DotParser.vb" />
+    <Compile Include="DOT\ExtractSpline.vb" />
+    <Compile Include="DOT\MergeAttributes.vb" />
+    <Compile Include="DOT\ParseBoundingBox.vb" />
+    <Compile Include="DOT\ParseFile.vb" />
+    <Compile Include="DOT\ParseLabelPosition.vb" />
+    <Compile Include="DOT\ReadDOT.vb" />
+    <Compile Include="DOT\RemoveUTFBOM.vb" />
+    <Compile Include="DOT\SubstituteDOT.vb" />
+    <Compile Include="DOT\WriteDOT.vb" />
+    <Compile Include="Error Handling\ExplainError.vb" />
+    <Compile Include="Error Handling\HandleError.vb" />
+    <Compile Include="Error Handling\Warning.vb" />
+    <Compile Include="GUI Actions\Action.vb" />
+    <Compile Include="GUI Actions\ConnectorSelector.vb" />
+    <Compile Include="GUI Actions\ConnectorsFixUnglued.vb" />
+    <Compile Include="GUI Actions\ExportDOT.vb" />
+    <Compile Include="GUI Actions\ImportCSV.vb" />
+    <Compile Include="GUI Actions\ImportDOT.vb" />
+    <Compile Include="GUI Actions\Layout.vb" />
+    <Compile Include="GUI Actions\SavePreset.vb" />
+    <Compile Include="GUI Actions\ShapesCluster.vb" />
+    <Compile Include="GUI Actions\ShapesSelectConnected.vb" />
+    <Compile Include="GUI Actions\ShapesSelectRoot.vb" />
+    <Compile Include="GUI Actions\ShapesSelectUnconnected.vb" />
+    <Compile Include="GUI Actions\ShapesSetRoot.vb" />
+    <Compile Include="GUI Actions\ShapesSize.vb" />
+    <Compile Include="GUI Actions\Tester.vb" />
+    <Compile Include="GUI\About.Designer.vb">
+      <DependentUpon>About.vb</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\About.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\BumpProgress.vb" />
+    <Compile Include="GUI\EndTXN.vb" />
+    <Compile Include="GUI\FatalError.Designer.vb">
+      <DependentUpon>FatalError.vb</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\FatalError.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Messages.designer.vb">
+      <DependentUpon>Messages.vb</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Messages.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Options.Designer.vb">
+      <DependentUpon>Options.vb</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Options.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Preset.designer.vb">
+      <DependentUpon>Preset.vb</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Preset.vb" />
+    <Compile Include="GUI\Progress.vb" />
+    <Compile Include="GUI\ProgressForm.designer.vb">
+      <DependentUpon>ProgressForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ProgressForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Settings.designer.vb">
+      <DependentUpon>Settings.vb</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Settings.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\StartTXN.vb" />
+    <Compile Include="GUI\SwitchCurrentSettings.vb" />
+    <Compile Include="Help\Explain.Designer.vb">
+      <DependentUpon>Explain.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Help\Explain.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Help\HowDoI.Designer.vb">
+      <DependentUpon>HowDoI.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Help\HowDoI.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Help\LoadToolTips.vb" />
+    <Compile Include="Help\OpenSample.vb" />
+    <Compile Include="Help\Pointer.Designer.vb">
+      <DependentUpon>Pointer.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Help\Pointer.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Help\ShowHowTo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="VISIO\AddCustomProperty.vb" />
+    <Compile Include="VISIO\AddGraphVisioMenu.vb" />
+    <Compile Include="VISIO\ColourToVisioRGB.vb" />
+    <Compile Include="VISIO\CreatePolygon.vb" />
+    <Compile Include="VISIO\CustomProperty.vb" />
+    <Compile Include="VISIO\DeleteCustomProperty.vb" />
+    <Compile Include="VISIO\DetermineShapeType.vb" />
+    <Compile Include="VISIO\DrawGraph.vb" />
+    <Compile Include="VISIO\DumpShape.vb" />
+    <Compile Include="VISIO\EnsureSection.vb" />
+    <Compile Include="VISIO\GetRootShape.vb" />
+    <Compile Include="VISIO\GetStencilShapes.vb" />
+    <Compile Include="VISIO\Is2D.vb" />
+    <Compile Include="VISIO\IsConnector.vb" />
+    <Compile Include="VISIO\IsVisible.vb" />
+    <Compile Include="VISIO\LoadVisio.vb" />
+    <Compile Include="VISIO\SortStencil.vb" />
+    <Compile Include="VISIO\OpenStencil.vb" />
+    <Compile Include="VISIO\RGBfromPalette.vb" />
+    <Compile Include="VISIO\SetDisplay.vb" />
+    <Compile Include="VISIO\SetDisplays.vb" />
+    <Compile Include="VISIO\VisioEvents.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="GUI\About.resx">
+      <DependentUpon>About.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FatalError.resx">
+      <DependentUpon>FatalError.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Messages.resx">
+      <DependentUpon>Messages.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Options.resx">
+      <DependentUpon>Options.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Preset.resx">
+      <DependentUpon>Preset.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ProgressForm.resx">
+      <DependentUpon>ProgressForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Settings.resx">
+      <DependentUpon>Settings.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Help\Explain.resx">
+      <DependentUpon>Explain.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Help\HowDoI.resx">
+      <DependentUpon>HowDoI.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Help\Pointer.resx">
+      <DependentUpon>Pointer.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="graphvizio\GraphVizioIn.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <EmbeddedResource Include="Resources\HowTos.txt" />
+    <Content Include="Help\Pictures\blank.jpg" />
+    <Content Include="Help\Pictures\box.jpg" />
+    <Content Include="Help\Pictures\centre.jpg" />
+    <Content Include="Help\Pictures\circle.jpg" />
+    <Content Include="Help\Pictures\circo.jpg" />
+    <Content Include="Help\Pictures\connectornamedynamic.jpg" />
+    <Content Include="Help\Pictures\connectornamemidarrow.jpg" />
+    <Content Include="Help\Pictures\connectornameuniversal.jpg" />
+    <Content Include="Help\Pictures\decagon.jpg" />
+    <Content Include="Help\Pictures\diamond.jpg" />
+    <Content Include="Help\Pictures\digraph.jpg" />
+    <Content Include="Help\Pictures\dodecagon.jpg" />
+    <Content Include="Help\Pictures\dot.jpg" />
+    <Content Include="Help\Pictures\egg.jpg" />
+    <Content Include="Help\Pictures\ellipse.jpg" />
+    <Content Include="Help\Pictures\fdp.jpg" />
+    <Content Include="Help\Pictures\glue.jpg" />
+    <Content Include="Help\Pictures\graph.jpg" />
+    <Content Include="Help\Pictures\hendecagon.jpg" />
+    <Content Include="Help\Pictures\heptagon.jpg" />
+    <Content Include="Help\Pictures\hexagon.jpg" />
+    <Content Include="Help\Pictures\house.jpg" />
+    <Content Include="Help\Pictures\ideal.jpg" />
+    <Content Include="Help\Pictures\leafstackall.jpg" />
+    <Content Include="Help\Pictures\leafstacklowest.jpg" />
+    <Content Include="Help\Pictures\lr.jpg" />
+    <Content Include="Help\Pictures\neato.jpg" />
+    <Content Include="Help\Pictures\nonagon.jpg" />
+    <Content Include="Help\Pictures\nopreview.jpg" />
+    <Content Include="Help\Pictures\octagon.jpg" />
+    <Content Include="Help\Pictures\orgchart0.jpg" />
+    <Content Include="Help\Pictures\parallelogram.jpg" />
+    <Content Include="Help\Pictures\pentagon.jpg" />
+    <Content Include="Help\Pictures\plaintext.jpg" />
+    <Content Include="Help\Pictures\quadrant.jpg" />
+    <Content Include="Help\Pictures\rect.jpg" />
+    <Content Include="Help\Pictures\rectangle.jpg" />
+    <Content Include="Help\Pictures\septagon.jpg" />
+    <Content Include="Help\Pictures\shapenamebox.jpg" />
+    <Content Include="Help\Pictures\shapenamecircle.jpg" />
+    <Content Include="Help\Pictures\shapenamedecagon.jpg" />
+    <Content Include="Help\Pictures\shapenamediamond.jpg" />
+    <Content Include="Help\Pictures\shapenamedodecagon.jpg" />
+    <Content Include="Help\Pictures\shapenameegg.jpg" />
+    <Content Include="Help\Pictures\shapenameellipse.jpg" />
+    <Content Include="Help\Pictures\shapenamehendecagon.jpg" />
+    <Content Include="Help\Pictures\shapenameheptagon.jpg" />
+    <Content Include="Help\Pictures\shapenamehexagon.jpg" />
+    <Content Include="Help\Pictures\shapenamehouse.jpg" />
+    <Content Include="Help\Pictures\shapenamenonagon.jpg" />
+    <Content Include="Help\Pictures\shapenameoctagon.jpg" />
+    <Content Include="Help\Pictures\shapenameparallelogram.jpg" />
+    <Content Include="Help\Pictures\shapenamepentagon.jpg" />
+    <Content Include="Help\Pictures\shapenameplaintext.jpg" />
+    <Content Include="Help\Pictures\shapenamerect.jpg" />
+    <Content Include="Help\Pictures\shapenamerectangle.jpg" />
+    <Content Include="Help\Pictures\shapenameseptagon.jpg" />
+    <Content Include="Help\Pictures\shapenamesquare.jpg" />
+    <Content Include="Help\Pictures\shapenametrapezium.jpg" />
+    <Content Include="Help\Pictures\shapenametriangle.jpg" />
+    <Content Include="Help\Pictures\spline.jpg" />
+    <Content Include="Help\Pictures\splines.jpg" />
+    <Content Include="Help\Pictures\square.jpg" />
+    <Content Include="Help\Pictures\straight.jpg" />
+    <Content Include="Help\Pictures\tb.jpg" />
+    <Content Include="Help\Pictures\topbottom.jpg" />
+    <Content Include="Help\Pictures\trapezium.jpg" />
+    <Content Include="Help\Pictures\triangle.jpg" />
+    <Content Include="Help\Pictures\twopi.jpg" />
+    <Content Include="Interops\Interop.Office.dll" />
+    <Content Include="Interops\Interop.VBIDE.dll" />
+    <Content Include="Interops\Interop.Visio.dll" />
+    <Content Include="Loader\adxloader.dll" />
+    <Content Include="Loader\adxloader64.dll" />
+    <None Include="Resources\explain.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\InstallBanner.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <EmbeddedResource Include="Resources\Logo32.ico">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Pointer.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\tooltips.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\GOLD Engine\GOLD Engine.vbproj">
+      <Project>{5bb7d470-2634-4ff8-b8e6-4bfeaf06bcc3}</Project>
+      <Name>GOLD Engine</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
